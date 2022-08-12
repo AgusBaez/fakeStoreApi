@@ -1,0 +1,5 @@
+#IGNORAR:
+node_modules
+*package
+/Other
+.env

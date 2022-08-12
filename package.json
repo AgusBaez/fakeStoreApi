@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "node-fetch": "^3.2.9",
+    "nodemon": "^2.0.19"
+  },
+  "name": "api-fake-store",
+  "description": "You will see the steps and knowledge that I take as a Skiller, it is not only to be a \"programming student\" but to integrate myself into a culture of values that go beyond knowing how to program",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "A.Baez",
+  "license": "ISC"
+}
