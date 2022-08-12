@@ -59,4 +59,6 @@
 - **_@Skill-Factory-By-Avalith_**
 - You will see the steps and knowledge that I take as a Skiller, it is not only to be a "programming student" but to integrate myself into a culture of values that go beyond knowing how to program
 
+![Imagen_Avalith](https://pbs.twimg.com/media/FS5XeVCXEAAQ_Ly?format=jpg&name=small)
+
 Agus_Baez👋 :octocat:
