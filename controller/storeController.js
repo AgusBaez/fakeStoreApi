@@ -1,9 +1,9 @@
 //Requiero de los datos..
 const getStoreModel = require("../model/storeModel");
 
+//Campos de productos especificos
 let getMappedProducts = async (req, _res) => {
   let products = await getStoreModel.getProducts();
-
   products = products.map((product) => ({
     id: product.id,
     title: product.title,
@@ -13,6 +13,7 @@ let getMappedProducts = async (req, _res) => {
   return products;
 };
 
+//Dar un tipo de orden por query sengun el tipo de dato, si no hay un orden devuelve todo los productos
 const getProductOrder = async (req, res) => {
   let products = await getMappedProducts();
   let typeOrder = req.query.order;
@@ -33,6 +34,7 @@ const getProductOrder = async (req, res) => {
   }
 };
 
+//Obtener por categoria el producto mas caro de esta
 const getProductsExpensive = async (req, res) => {
   const allCategory = await getStoreModel.getCategories();
 
@@ -47,6 +49,7 @@ const getProductsExpensive = async (req, res) => {
   });
 };
 
+//Obtener todos los productos por categoria
 const getAllProductByCategory = async (req, res) => {
   const allCategory = await getStoreModel.getCategories();
 
@@ -59,6 +62,7 @@ const getAllProductByCategory = async (req, res) => {
   });
 };
 
+//Obtener por parametro los todos los productos que existan en una categoria
 const getProductByCategory = async (req, res) => {
   let data = req.params.categories;
   let products = await getStoreModel.getProducts(data);
@@ -71,6 +75,7 @@ const getProductByCategory = async (req, res) => {
   }
 };
 
+//Obtener Producto a traves del parametro ID 
 const getProductById = async (req, res) => {
   const id = req.params.id;
 

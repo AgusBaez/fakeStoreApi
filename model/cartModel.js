@@ -1,6 +1,5 @@
 const express = require("express");
 
-//"""""Conexion a la base de datos"""""
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
