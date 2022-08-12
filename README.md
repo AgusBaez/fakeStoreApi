@@ -31,9 +31,20 @@ All Products By Categories:
 Products By Category:
 [http://localhost:3000/store/products/categories/electronics]
 
-    # Carts ( - All Carts: [http://localhost:3000/store/carts] - Order Carts: [http://localhost:3000/store/carts?order=4]     - [http://localhost:3000/store/carts?order=3&order=5] - Order DESC & ASC: [http://localhost:3000/store/carts?order=desc]    - [http://localhost:3000/store/products/prices?order=asc] - Order By Date [http://localhost:3000/store/carts/date/?end=2020-01-01T00:00:02.000Z] - BigCarts [http://localhost:3000/store/carts/bigcarts] ) #
+    # Carts 
+    - All Carts:
+        ([http://localhost:3000/store/carts])
+    - Order Carts: 
+        http://localhost:3000/store/carts?order=4
+            [http://localhost:3000/store/carts?order=3&order=5]
+    - Order DESC & ASC:
+        [http://localhost:3000/store/carts?order=desc]
+         - [http://localhost:3000/store/products/prices?order=asc] 
+    - Order By Date: 
+    [http://localhost:3000/store/carts/date/?end=2020-01-01T00:00:02.000Z] - BigCarts [http://localhost:3000/store/carts/bigcarts] #
 
-    # Users #
+
+# Users #
 
 - All Users
   [http://localhost:3000/store/users]
