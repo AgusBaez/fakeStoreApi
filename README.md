@@ -5,9 +5,10 @@
 ## Como utilizar el proyecto: :shipit:
 
 > npm -i
+
 > npm start
 
-- **instalas** las _dependencias_ e ingresas a traves del **localhost** en el puerto 3000 a las _rutas_:
+- **instalas** las _dependencias_ e ingresas a traves del **localhost** en el puerto 3000 a las _rutas_.
 
 ## El Router de la API: :shinto_shrine:
 
