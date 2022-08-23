@@ -5,13 +5,13 @@
 ## Como utilizar el proyecto: :shipit:
 
 > npm -i
-
 > npm start
-- ingresas a traves del localhost en el puerto 3000
+
+- **instalas** las _dependencias_ e ingresas a traves del **localhost** en el puerto 3000 a las _rutas_:
 
 ## El Router de la API: :shinto_shrine:
 
-### Products:
+### Products & Categories:
 - All Products
   - http://localhost:3000/store/products/prices
 - Products desc & asc:
@@ -40,14 +40,21 @@
   - http://localhost:3000/store/carts/date/?end=2020-01-01T00:00:02.000Z
 - BigCarts
   - http://localhost:3000/store/carts/bigcarts
+- Get Cart By ID
+  - http://localhost:3000/store/carts/5
 
 ### Users
 - All Users
   - http://localhost:3000/store/users
 - Three First Users
   - http://localhost:3000/store/users/firsts
+- Get User Limit
+  - x
+- Get User 
+  - x
 
 # Creditos: :rocket:
+- **_Mentor: Alexis Moragues_**
 - **_@Skill-Factory-By-Avalith_**
 - You will see the steps and knowledge that I take as a Skiller, it is not only to be a "programming student" but to integrate myself into a culture of values that go beyond knowing how to program
 

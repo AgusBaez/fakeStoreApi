@@ -2,18 +2,20 @@ const getCartModel = require("../model/cartModel");
 const getUserModel = require("../model/userModel");
 
 /* All Carts */
-const getCarts = async (req, res) => {
-  let carts = await getCartModel.getCarts();
-
-  res.status(200).send(carts);
+const getCarts = async (req, res, next) => {
+  await getCartModel
+    .getCarts() // del modelo obtengo la funcion para traer los carritos de la api
+    .then((dataCarts) => res.status(200).send(dataCarts))
+    .catch((err) => next(err));
 };
 
 /* All BigCarts & BigUser*/
-const getBigCarts = async (req, res) => {
+const getBigCarts = async (req, res, next) => {
+  //Obtengo los carritos y los usuarios de mis modelos
   let carts = await getCartModel.getCarts();
   let users = await getUserModel.getUsers();
 
-  let getAllBigCarts = carts.filter((bigCart) => {
+  const getAllBigCarts = carts.filter((bigCart) => {
     if (bigCart.products.length > 2) {
       let bigUser = users.find((userCart) => {
         return userCart.id === bigCart.userId;
@@ -24,7 +26,19 @@ const getBigCarts = async (req, res) => {
       };
     }
   });
-  res.status(200).send(getAllBigCarts);
+
+  try {
+    res.status(200).send(getAllBigCarts);
+  } catch {
+    (err) => next(err);
+  }
+
+  /*
+   filtro si existe un carrito(CallBack bigCart) con mas de 2 productos("bigCart.products"),
+   una vez comprobado que existe busco al usuario que contenga el mismo ID del carrito(bigCart) lo almaceno en "bigUser"
+   ahora a bigCart le creo un nuevo atributo "name" que va a almacenar(o va a ser igual a) solamente el nombre del usuario encontrado
+   y retorno el carrito(bigCart) filtrado y con el usuario perteneciente
+   */
 };
 
 /* Carts By ID */
