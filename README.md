@@ -49,9 +49,7 @@
   - http://localhost:3000/store/users
 - Three First Users
   - http://localhost:3000/store/users/firsts
-- Get User Limit
-  - x
-- Get User 
+- Get User Limit & Sort
   - x
 
 # Creditos: :rocket:
